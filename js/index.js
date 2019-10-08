@@ -15,6 +15,7 @@ var suma = document.getElementById("suma");
 var raiz = document.getElementById("raiz");
 var pot = document.getElementById("potencia");
 var igual = document.getElementById("igual");
+var multiplicacion = document.getElementById("multiplicacion")
  
 var n1;
 var op;  
@@ -67,6 +68,14 @@ var op;
         op = resul.innerHTML;
         resul.innerHTML="";
     }
+
+    multiplicacion.onclick = function(){
+        n1 = resul.innerHTML; 
+        resul.innerHTML ="x";
+        op = resul.innerHTML;
+        resul.innerHTML="";
+    }
+
     igual.onclick = function(){
        switch(op){
            case "+":
@@ -74,7 +83,10 @@ var op;
                break;   
            case "^":
                resul.innerHTML = Math.pow(parseFloat(n1), parseFloat(resul.innerHTML)); 
-               break;  
+               break; 
+               case "x":
+                resul.innerHTML = Math.pow(parseFloat(n1), parseFloat(resul.innerHTML)); 
+                break;  
            
        }
     }
